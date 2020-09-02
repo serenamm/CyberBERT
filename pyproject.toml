@@ -14,6 +14,7 @@ keras-applications = "1.0.7"
 keras-preprocessing = "1.0.9"
 jupyter = "^1.0.0"
 lab = "^6.0"
+pandas = "^1.1.1"
 
 [tool.poetry.dev-dependencies]
 
