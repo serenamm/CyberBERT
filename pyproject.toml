@@ -6,8 +6,6 @@ authors = ["serenamm <smmcdonnell@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-tensorflow = "1.13.1"
-tensorflow-gpu = "1.13.1"
 ipykernel = "5.1.1"
 keras = "2.2.4=0"
 keras-applications = "1.0.7"
@@ -15,6 +13,9 @@ keras-preprocessing = "1.0.9"
 jupyter = "^1.0.0"
 lab = "^6.0"
 pandas = "^1.1.1"
+tensorflow = "1.13.1"
+tensorflow-estimator = "1.13.0=py_0"
+
 
 [tool.poetry.dev-dependencies]
 
