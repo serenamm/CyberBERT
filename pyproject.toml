@@ -8,13 +8,16 @@ authors = ["serenamm <smmcdonnell@gmail.com>"]
 python = "^3.7"
 ipykernel = "5.1.1"
 keras = "2.2.4=0"
-keras-applications = "1.0.7"
-keras-preprocessing = "1.0.9"
+keras-applications = "1.0.7=py_0"
+keras-preprocessing = "1.0.9=py_0"
 jupyter = "^1.0.0"
-lab = "^6.0"
 pandas = "^1.1.1"
 tensorflow = "1.13.1"
 tensorflow-estimator = "1.13.0=py_0"
+keras-pos-embd = "^0.11.0"
+keras_layer_normalization = "^0.14.0"
+keras_transformer = "^0.38.0"
+sklearn = "^0.0"
 
 
 [tool.poetry.dev-dependencies]
