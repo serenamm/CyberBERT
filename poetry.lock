@@ -411,6 +411,19 @@ tests = ["pytest", "pytest-pep8", "pytest-xdist", "pytest-cov"]
 
 [[package]]
 category = "main"
+description = "BERT implemented in Keras"
+name = "keras-bert"
+optional = false
+python-versions = "*"
+version = "0.75.0"
+
+[package.dependencies]
+Keras = "*"
+keras-transformer = ">=0.30.0"
+numpy = "*"
+
+[[package]]
+category = "main"
 description = "Calculate similarity with embedding"
 name = "keras-embed-sim"
 optional = false
@@ -746,7 +759,7 @@ six = ">=1.9"
 [[package]]
 category = "main"
 description = "Run a subprocess in a pseudo terminal"
-marker = "sys_platform != \"win32\" or os_name != \"nt\" or python_version >= \"3.3\" and sys_platform != \"win32\""
+marker = "python_version >= \"3.3\" and sys_platform != \"win32\" or sys_platform != \"win32\" or os_name != \"nt\" or python_version >= \"3.3\" and sys_platform != \"win32\" and (python_version >= \"3.3\" and sys_platform != \"win32\" or sys_platform != \"win32\")"
 name = "ptyprocess"
 optional = false
 python-versions = "*"
@@ -1109,7 +1122,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "52c655fdec2d94c448a37fd42a1b191cb0f16f9712ff7f2721478b4a381f81b2"
+content-hash = "59d82441c327ddf1a3df8530735a30293ab17440e9f5376aa535ec725cc90d85"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -1337,6 +1350,9 @@ keras = [
 keras-applications = [
     {file = "Keras_Applications-1.0.7-py2.py3-none-any.whl", hash = "sha256:94b8acc84fb8b1e3d752e20ed4cafa8377c9ecf6e6c1aa09942d959dc02e439a"},
     {file = "Keras_Applications-1.0.7.tar.gz", hash = "sha256:60607b2b98868983e5153bf1cc6aa468ba73adc93bc977a90edaa4bc595e69fa"},
+]
+keras-bert = [
+    {file = "keras-bert-0.75.0.tar.gz", hash = "sha256:f959cae5add7dff90502163d71dd31a6a04dc70602a5cf8624ea15f625c0bb96"},
 ]
 keras-embed-sim = [
     {file = "keras-embed-sim-0.8.0.tar.gz", hash = "sha256:4686075cd0da1ddea6423deb46889b7ac1d9dc017b4b4ae6306689dfbe03a750"},

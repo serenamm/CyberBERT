@@ -1,1 +1,7 @@
-notebooks/.ipynb_checkpoints
+# Ignore notebook checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Ignore .cpython-37.pyc files
+cpython-37.pyc
+*/.cpython-37.pyc
