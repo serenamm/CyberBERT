@@ -53,9 +53,9 @@ def get_model(token_num,
               feed_forward_activation='gelu',
               training=True,
               trainable=None,
-              output_layer_num=1,
-              use_adapter=False,
-              adapter_units=None):
+              output_layer_num=1):
+            #   use_adapter=False,
+            #   adapter_units=None):
     """Get BERT model.
 
     See: https://arxiv.org/pdf/1810.04805.pdf
@@ -85,8 +85,8 @@ def get_model(token_num,
         feed_forward_activation = gelu
     if trainable is None:
         trainable = training
-    if adapter_units is None:
-        adapter_units = max(1, embed_dim // 100)
+    # if adapter_units is None:
+    #     adapter_units = max(1, embed_dim // 100)
 
     def _trainable(_layer):
         if isinstance(trainable, (list, tuple, set)):
@@ -112,9 +112,9 @@ def get_model(token_num,
         attention_activation=attention_activation,
         feed_forward_activation=feed_forward_activation,
         dropout_rate=dropout_rate,
-        use_adapter=use_adapter,
-        adapter_units=adapter_units,
-        adapter_activation=gelu,
+        # use_adapter=use_adapter,
+        # adapter_units=adapter_units,
+        # adapter_activation=gelu,
     )
     if training:
         mlm_dense_layer = keras.layers.Dense(
@@ -174,9 +174,10 @@ def get_rec_model(token_num,
               feed_forward_activation='gelu',
               training=True,
               trainable=None,
-              output_layer_num=1,
-              use_adapter=False,
-              adapter_units=None):
+              output_layer_num=1):
+              # Adapter is deprecated
+            #   use_adapter=False,
+            #   adapter_units=None):
     """Get BERT model.
 
     See: https://arxiv.org/pdf/1810.04805.pdf
@@ -206,8 +207,8 @@ def get_rec_model(token_num,
         feed_forward_activation = gelu
     if trainable is None:
         trainable = training
-    if adapter_units is None:
-        adapter_units = max(1, embed_dim // 100)
+    # if adapter_units is None:
+    #     adapter_units = max(1, embed_dim // 100)
 
     def _trainable(_layer):
         if isinstance(trainable, (list, tuple, set)):
@@ -234,9 +235,9 @@ def get_rec_model(token_num,
         attention_activation=attention_activation,
         feed_forward_activation=feed_forward_activation,
         dropout_rate=dropout_rate,
-        use_adapter=use_adapter,
-        adapter_units=adapter_units,
-        adapter_activation=gelu,
+        # use_adapter=use_adapter,
+        # adapter_units=adapter_units,
+        # adapter_activation=gelu,
     )
     if training:
         mlm_dense_layer = keras.layers.Dense(
